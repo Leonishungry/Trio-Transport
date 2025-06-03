@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue & White Themed Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #ffffff;
+      color: #1e3a8a;
+      overflow-x: hidden;
+      margin: 0;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    .custom-navbar {
+      background: white;
+      border: 2px solid rgba(0, 60, 255, 0.2);
+      backdrop-filter: blur(40px);
+      border-radius: 30px;
+      margin: 15px auto;
+      max-width: 95%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .nav-link {
+      margin: 0 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: underline;
+      color: #1e40af !important;
+    }
+
+    .hero-section {
+      background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.6)),
+        url('image/a4f15ba1443c21739879bb04a4cb2cae (1).jpg') center/cover no-repeat;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 15px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      color: #dbeafe;
+    }
+
+    .btn-custom {
+      padding: 12px 24px;
+      border-radius: 30px;
+      margin: 0 10px;
+      font-weight: 600;
+      background: #1d4ed8;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background: #1e40af;
+    }
+
+    .co2-section {
+      background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.6)),
+        url('image/8b7c014bfdc398238908f12bcd9f9721 (1).jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      flex-direction: column;
+      height: 100vh;
+      color: white;
+    }
+
+    .co2-counter {
+      font-size: 4rem;
+      font-weight: 800;
+      color: #1e3a8a;
+      text-shadow: 0 0 10px #93c5fd;
+    }
+
+    .carbon-section {
+      background: #f0f9ff;
+      color: #1e3a8a;
+      padding: 2rem;
+    }
+
+    .carbon-section header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .carbon-section header h1 {
+      font-size: 3rem;
+    }
+
+    .carbon-section .logo {
+      display: inline-block;
+      background: #bfdbfe;
+      color: #1e3a8a;
+      font-weight: bold;
+      padding: 0.3rem 0.6rem;
+      margin: 0 0.5rem;
+      border-radius: 5px;
+      font-size: 1.5rem;
+    }
+
+    .info-box {
+      background: #ffffff;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+      color: #1e3a8a;
+    }
+
+    .info-box:nth-child(2) {
+      width: 1000px;
+    }
+
+    .feature-card {
+      background: #dbeafe;
+      padding: 1.5rem;
+      border-radius: 15px;
+      width: 250px;
+      text-align: center;
+      color: #1e3a8a;
+    }
+
+    .message {
+      background: #002697;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      color: #1e3a8a;
+    }
+
+    .calculator-container,
+    .intro-text {
+      background: #ffffff;
+      color: #1e3a8a;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      margin: 2rem auto;
+      max-width: 700px;
+    }
+
+    .intro-text h2 {
+      color: #2563eb;
+    }
+
+    .result-box {
+      padding: 1.5rem;
+      border-left: 6px solid;
+      border-radius: 10px;
+      color: #1e3a8a;
+    }
+
+    .result-good {
+      background: #e6ffed;
+      border-color: #28a745;
+    }
+
+    .result-normal {
+      background: #fffbe6;
+      border-color: #ffc107;
+    }
+
+    .result-bad {
+      background: #ffe6e6;
+      border-color: #dc3545;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="custom-navbar">
+    <a href="#" class="nav-link">Home</a>
+    <a href="#" class="nav-link">About</a>
+    <a href="#" class="nav-link">Contact</a>
+  </nav>
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Welcome to Our Site</h1>
+      <p class="hero-subtitle">Creating sustainable solutions with style</p>
+      <button class="btn-custom">Get Started</button>
+    </div>
+  </section>
+
+  <section class="co2-section">
+    <div class="co2-counter">1234 kg CO2 Saved</div>
+  </section>
+
+  <section class="carbon-section">
+    <header>
+      <h1><span class="logo">Eco</span>Calculator</h1>
+    </header>
+    <div class="info-box">Efficient usage of resources</div>
+    <div class="info-box">Improved carbon footprint awareness</div>
+  </section>
+
+  <section class="message">
+    <h2>Join the Movement</h2>
+    <p>Together we can build a greener planet</p>
+  </section>
+
+  <div class="card">
+    <div class="card-title">Clean UI</div>
+    <div class="card-desc">Designed with simplicity and function in mind</div>
+  </div>
+
+  <section class="intro-text">
+    <h2>How It Works</h2>
+    <p>We calculate your carbon footprint based on daily activities and suggest ways to reduce it.</p>
+  </section>
+
+  <div class="calculator-container">
+    <h3>Carbon Calculator</h3>
+    <div class="result-box result-good">You're doing great! Keep it up!</div>
+  </div>
+</body>
+
+</html>
